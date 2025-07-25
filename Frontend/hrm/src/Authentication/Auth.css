@@ -1,0 +1,212 @@
+.login-page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #fff5d7; 
+}
+
+.login-container{
+  background: #ffffff; 
+  padding: 10px 10px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 350px;
+}
+
+.logo {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+.login-container h2{
+  margin-bottom: 20px;
+  color: #ff5e6c; 
+}
+
+input {
+  width: 94%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid #ff5e6c;
+  background-color: #ffffff;
+  transition: border 0.3s, color 0.3s;
+}
+
+input:focus {
+  border: 1px solid #ff5e6c;
+  color: #ff5e6c;
+  outline: none;
+}
+
+input::placeholder {
+  color: #feb300;
+}
+
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff5e6c;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+button:hover {
+  background-color: #ffaaab;
+  color: #ff5e6c;
+  border: 1px solid #ff5e6c;
+}
+
+.error {
+  color: #ff5e6c;
+  font-size: 0.9em;
+}
+
+.register-link {
+  margin-top: 15px;
+  color: #feb300;
+  cursor: pointer;
+  display: inline-block;
+}
+.register-link:hover {
+  color: #ff5e6c;
+  text-decoration: underline;
+}
+
+.login-logo{
+  font-size: 40px;
+  color: #feb300;
+  margin-bottom: -10px;
+}
+
+/* ==================================== Register CSS ======================================= */
+.register-page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  min-height: 100vh;
+  background-color: #fff5d7;
+}
+
+.register-container {
+  background: #fff;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  width: 35%;
+  max-width: 700px;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #feb300;
+}
+
+.register-container h2{
+   margin-bottom: 20px;
+   color: #ff5e6c;
+   margin-left: 259px;
+}
+
+.logo {
+   font-size: 2.5rem;
+   color: #ff5e6c;
+   margin-bottom: -1rem;
+   text-align: center;
+   margin-left: 261px;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.input-group {
+  flex: 1 1 48%;
+  display: flex;
+  flex-direction: column;
+}
+
+select {
+  padding: 0.5rem;
+  border: 2px solid #ffaaab;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #fff5d7;
+  color: #feb300;
+  margin-top: 7px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="date"] {
+  padding: 0.5rem;
+  border: 2px solid #ffaaab;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #fff5d7;
+  color: #333;
+}
+input[type="email"]{
+ flex: 1 1 100%;
+}
+button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #ff5e6c;
+  color: white;
+  border: none;
+  font-weight: bold;
+  border-radius: 8px;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #feb300;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error {
+  color: #ff0000;
+  margin-top: 0.5rem;
+  width: 100%;
+}
+
+.login-link {
+  margin-top: 1rem;
+  text-align: center;
+  color: #007BFF;
+  cursor: pointer;
+  margin-left: 35px;
+}
+
+input[readonly] {
+  background-color: #eee;
+  font-weight: bold;
+  color: #555;
+  cursor: default;
+}
+
+.custom-date-input {
+  width: 94%;
+  padding: 0.5rem;
+  border: 2px solid #ffaaab;
+  border-radius: 6px;
+  background-color: #fff5d7;
+  font-size: 1rem;
+  color: #333;
+}

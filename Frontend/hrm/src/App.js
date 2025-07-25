@@ -1,24 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Login from './Authentication/Login';
+import Register from './Authentication/Register';
+import ForgetPassword from './Authentication/ForgetPassword';
+import User from './Administrator/User';
+import RolesAndPermission from './Administrator/RolesAndPermission';
+import AdminDashboard from './Dashboard/AdminDashboard';
+import AdminLayout from './Layout/AdminLayout';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        {/* Public Routes */}
+        <Route path="/" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/forget-password" element={<ForgetPassword />} />
+
+        {/* Admin Routes (Wrapped with layout) */}
+        <Route
+          path="/adminDashboard"
+          element={
+            <AdminLayout>
+              <AdminDashboard />
+            </AdminLayout>
+          }
+        />
+        <Route
+          path="/roleandpermission"
+          element={
+            <AdminLayout>
+              <RolesAndPermission />
+            </AdminLayout>
+          }
+        />
+        <Route
+          path="/user"
+          element={
+            <AdminLayout>
+              <User />
+            </AdminLayout>
+          }
+        />
+      </Routes>
+    </Router>
   );
 }
 
